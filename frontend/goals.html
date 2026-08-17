@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CareerOS — Goals</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/goals.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-mark">C</div>
+
+                <div>
+                    <strong>CareerOS</strong>
+                    <span>Your career, organized.</span>
+                </div>
+            </div>
+
+
+            <nav>
+
+                <a href="/dashboard">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a
+                    href="/goals"
+                    class="active"
+                >
+                    <span>◎</span>
+                    Goals
+                </a>
+
+                <a href="#">
+                    <span>▣</span>
+                    Applications
+                </a>
+
+                <a href="#">
+                    <span>✦</span>
+                    Skills
+                </a>
+
+                <a href="#">
+                    <span>◇</span>
+                    Projects
+                </a>
+
+                <a href="#">
+                    <span>↗</span>
+                    Career Roadmap
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="#">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+                <button id="logout-button">
+                    <span>↪</span>
+                    Sign out
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <main class="content">
+
+
+            <header class="header">
+
+                <div>
+
+                    <div class="breadcrumb">
+                        CareerOS <span>/</span> Goals
+                    </div>
+
+                    <h1>
+                        Your career goals
+                    </h1>
+
+                    <p>
+                        Turn your career ambitions into measurable progress.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="open-goal-modal"
+                    class="create-button"
+                >
+                    <span>+</span>
+                    Create goal
+                </button>
+
+            </header>
+
+
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <span>Total goals</span>
+
+                        <strong id="total-goals">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>In progress</span>
+
+                        <strong id="active-goals">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>Completed</span>
+
+                        <strong id="completed-goals">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="goals-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Career milestones
+                        </h2>
+
+                        <p>
+                            The goals you're currently working toward.
+                        </p>
+
+                    </div>
+
+
+                    <select id="goal-filter">
+
+                        <option value="all">
+                            All goals
+                        </option>
+
+                        <option value="active">
+                            In progress
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    id="goals-container"
+                    class="goals-container"
+                ></div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- CREATE GOAL MODAL -->
+
+    <div
+        id="goal-modal"
+        class="modal hidden"
+    >
+
+        <div class="modal-backdrop"></div>
+
+
+        <div class="modal-card">
+
+            <button
+                id="close-modal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icon">
+                ✦
+            </div>
+
+
+            <h2>
+                Create a career goal
+            </h2>
+
+            <p>
+                What do you want to accomplish next?
+            </p>
+
+
+            <form id="goal-form">
+
+                <label>
+
+                    Goal title
+
+                    <input
+                        id="goal-title"
+                        type="text"
+                        placeholder="Become a Software Engineer"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Description
+
+                    <textarea
+                        id="goal-description"
+                        placeholder="Describe what you want to accomplish..."
+                        rows="5"
+                    ></textarea>
+
+                </label>
+
+
+                <div class="modal-buttons">
+
+                    <button
+                        type="button"
+                        id="cancel-goal"
+                        class="cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Create goal
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="goal-message"
+                    class="goal-message"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/goals.js"></script>
+
+</body>
+
+</html>

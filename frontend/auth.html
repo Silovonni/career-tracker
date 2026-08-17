@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CareerOS career development platform"
+    >
+
+    <title>CareerOS — Authentication</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/auth.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+
+            <!-- ==================================================
+                 BRAND
+            =================================================== -->
+
+            <div class="auth-brand">
+
+                <div class="brand-mark">
+                    C
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        CareerOS
+                    </strong>
+
+                    <span>
+                        Career Development System
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 LOGIN
+            =================================================== -->
+
+            <div
+                id="login-section"
+                class="auth-section"
+            >
+
+                <div class="auth-heading">
+
+                    <p>
+                        WELCOME BACK
+                    </p>
+
+                    <h1>
+                        Build your future.
+                    </h1>
+
+                    <span>
+                        Sign in to continue your career journey.
+                    </span>
+
+                </div>
+
+
+                <form id="login-form">
+
+
+                    <label for="login-email">
+
+                        Email
+
+                        <input
+                            id="login-email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </label>
+
+
+                    <label for="login-password">
+
+                        Password
+
+                        <input
+                            id="login-password"
+                            name="password"
+                            type="password"
+                            placeholder="••••••••"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        Sign In
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-footer">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a
+                        href="#"
+                        id="show-register"
+                    >
+                        Create one
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 REGISTER
+            =================================================== -->
+
+            <div
+                id="register-section"
+                class="auth-section hidden"
+            >
+
+                <div class="auth-heading">
+
+                    <p>
+                        GET STARTED
+                    </p>
+
+                    <h1>
+                        Create your future.
+                    </h1>
+
+                    <span>
+                        Build your CareerOS profile and start tracking your progress.
+                    </span>
+
+                </div>
+
+
+                <form id="register-form">
+
+
+                    <label for="register-name">
+
+                        Full Name
+
+                        <input
+                            id="register-name"
+                            name="name"
+                            type="text"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </label>
+
+
+                    <label for="register-email">
+
+                        Email
+
+                        <input
+                            id="register-email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </label>
+
+
+                    <label for="register-password">
+
+                        Password
+
+                        <input
+                            id="register-password"
+                            name="password"
+                            type="password"
+                            placeholder="At least 8 characters"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        Create Account
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-footer">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a
+                        href="#"
+                        id="show-login"
+                    >
+                        Sign in
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 STATUS MESSAGE
+            =================================================== -->
+
+            <div
+                id="auth-message"
+                class="auth-message"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/auth.js"></script>
+
+</body>
+
+</html>

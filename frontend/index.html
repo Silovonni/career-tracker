@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CareerOS — Your personal career development command center."
+    >
+
+    <title>CareerOS — Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         APPLICATION
+    ====================================================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+
+                <!-- BRAND -->
+
+                <a
+                    href="/"
+                    class="brand"
+                >
+
+                    <div class="brand-mark">
+                        C
+                    </div>
+
+                    <div class="brand-copy">
+
+                        <strong>
+                            CareerOS
+                        </strong>
+
+                        <span>
+                            Career Command Center
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NAVIGATION -->
+
+                <nav class="navigation">
+
+                    <p class="nav-label">
+                        WORKSPACE
+                    </p>
+
+
+                    <a
+                        href="/"
+                        class="nav-item active"
+                    >
+
+                        <span class="nav-icon">
+                            ◈
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#goals"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ◎
+                        </span>
+
+                        <span>
+                            Goals
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#projects"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ◇
+                        </span>
+
+                        <span>
+                            Projects
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#applications"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ↗
+                        </span>
+
+                        <span>
+                            Applications
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#skills"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Skills
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#learning"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ▣
+                        </span>
+
+                        <span>
+                            Learning
+                        </span>
+
+                    </a>
+
+
+                    <p class="nav-label nav-label-spaced">
+                        INSIGHTS
+                    </p>
+
+
+                    <a
+                        href="#analytics"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ◒
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#assistant"
+                        class="nav-item"
+                    >
+
+                        <span class="nav-icon">
+                            ✧
+                        </span>
+
+                        <span>
+                            AI Assistant
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="#settings"
+                    class="nav-item"
+                >
+
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+
+                <button
+                    id="logout-button"
+                    class="logout-button"
+                    type="button"
+                >
+
+                    <span>
+                        ↪
+                    </span>
+
+                    <span>
+                        Sign Out
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CAREEROS
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        ♢
+                    </button>
+
+
+                    <div
+                        id="user-avatar"
+                        class="user-avatar"
+                    >
+                        C
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <div class="dashboard-content">
+
+
+                <!-- WELCOME -->
+
+                <section class="welcome-section">
+
+                    <div>
+
+                        <p class="section-kicker">
+                            YOUR CAREER, ORGANIZED
+                        </p>
+
+                        <h2>
+                            Welcome back,
+                            <span id="user-name">
+                                Career Builder
+                            </span>.
+                        </h2>
+
+                        <p class="welcome-description">
+                            Keep building. Keep learning. Keep moving
+                            toward the career you want.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        id="quick-action-button"
+                        type="button"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
+                        Add Activity
+
+                    </button>
+
+                </section>
+
+
+                <!-- =================================================
+                     STATS
+                ================================================== -->
+
+                <section class="stats-grid">
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span class="stat-label">
+                                CAREER PROGRESS
+                            </span>
+
+                            <span class="stat-symbol">
+                                ◈
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="career-progress"
+                            class="stat-value"
+                        >
+                            0%
+                        </strong>
+
+                        <div class="progress-track">
+
+                            <div
+                                id="career-progress-bar"
+                                class="progress-fill"
+                                style="width: 0%"
+                            ></div>
+
+                        </div>
+
+                        <span class="stat-caption">
+                            Overall development
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span class="stat-label">
+                                ACTIVE GOALS
+                            </span>
+
+                            <span class="stat-symbol">
+                                ◎
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="goal-count"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-caption">
+                            Goals in progress
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span class="stat-label">
+                                PROJECTS
+                            </span>
+
+                            <span class="stat-symbol">
+                                ◇
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="project-count"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-caption">
+                            Portfolio projects
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span class="stat-label">
+                                APPLICATIONS
+                            </span>
+
+                            <span class="stat-symbol">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <strong
+                            id="application-count"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-caption">
+                            Jobs being tracked
+                        </span>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     MAIN GRID
+                ================================================== -->
+
+                <section class="dashboard-grid">
+
+
+                    <!-- CAREER ROADMAP -->
+
+                    <article
+                        id="goals"
+                        class="panel roadmap-panel"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    ROADMAP
+                                </p>
+
+                                <h3>
+                                    Career Roadmap
+                                </h3>
+
+                            </div>
+
+
+                            <button
+                                class="text-button"
+                                type="button"
+                                id="view-goals-button"
+                            >
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="roadmap-list"
+                            class="roadmap-list"
+                        >
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">
+                                    ◎
+                                </div>
+
+                                <strong>
+                                    Your roadmap starts here
+                                </strong>
+
+                                <span>
+                                    Add your first career goal.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CAREER PROFILE -->
+
+                    <article class="panel profile-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    PROFILE
+                                </p>
+
+                                <h3>
+                                    Career Direction
+                                </h3>
+
+                            </div>
+
+                            <span class="status-dot">
+                                ●
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-details">
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    TARGET ROLE
+                                </span>
+
+                                <strong id="target-role">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    CAREER GOAL
+                                </span>
+
+                                <strong id="career-goal">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    EDUCATION
+                                </span>
+
+                                <strong id="education">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail">
+
+                                <span>
+                                    EXPERIENCE
+                                </span>
+
+                                <strong id="experience-level">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            id="edit-profile-button"
+                            class="secondary-button"
+                            type="button"
+                        >
+                            Complete Profile
+                        </button>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     SECOND GRID
+                ================================================== -->
+
+                <section class="dashboard-grid">
+
+
+                    <!-- PROJECTS -->
+
+                    <article
+                        id="projects"
+                        class="panel"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    PORTFOLIO
+                                </p>
+
+                                <h3>
+                                    Projects
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="text-button"
+                                type="button"
+                            >
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="projects-list"
+                            class="card-list"
+                        >
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">
+                                    ◇
+                                </div>
+
+                                <strong>
+                                    No projects yet
+                                </strong>
+
+                                <span>
+                                    Your projects will appear here.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- APPLICATIONS -->
+
+                    <article
+                        id="applications"
+                        class="panel"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    JOB SEARCH
+                                </p>
+
+                                <h3>
+                                    Applications
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="text-button"
+                                type="button"
+                            >
+                                View all
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="applications-list"
+                            class="card-list"
+                        >
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">
+                                    ↗
+                                </div>
+
+                                <strong>
+                                    No applications yet
+                                </strong>
+
+                                <span>
+                                    Start tracking your job search.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     SKILLS + LEARNING
+                ================================================== -->
+
+                <section class="dashboard-grid">
+
+
+                    <article
+                        id="skills"
+                        class="panel"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    DEVELOPMENT
+                                </p>
+
+                                <h3>
+                                    Skills
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="text-button"
+                                type="button"
+                            >
+                                Manage
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="skills-list"
+                            class="skills-list"
+                        >
+
+                            <div class="skill-row">
+
+                                <div class="skill-info">
+
+                                    <strong>
+                                        Python
+                                    </strong>
+
+                                    <span>
+                                        Not started
+                                    </span>
+
+                                </div>
+
+                                <div class="skill-track">
+
+                                    <div
+                                        class="skill-fill"
+                                        style="width: 0%"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-row">
+
+                                <div class="skill-info">
+
+                                    <strong>
+                                        SQL
+                                    </strong>
+
+                                    <span>
+                                        Not started
+                                    </span>
+
+                                </div>
+
+                                <div class="skill-track">
+
+                                    <div
+                                        class="skill-fill"
+                                        style="width: 0%"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="skill-row">
+
+                                <div class="skill-info">
+
+                                    <strong>
+                                        Git
+                                    </strong>
+
+                                    <span>
+                                        Not started
+                                    </span>
+
+                                </div>
+
+                                <div class="skill-track">
+
+                                    <div
+                                        class="skill-fill"
+                                        style="width: 0%"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        id="learning"
+                        class="panel"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <p class="panel-kicker">
+                                    LEARNING
+                                </p>
+
+                                <h3>
+                                    Study Progress
+                                </h3>
+
+                            </div>
+
+                            <span class="period-label">
+                                This week
+                            </span>
+
+                        </div>
+
+
+                        <div class="learning-summary">
+
+                            <strong
+                                id="study-hours"
+                                class="learning-hours"
+                            >
+                                0
+                            </strong>
+
+                            <span>
+                                hours studied
+                            </span>
+
+                        </div>
+
+
+                        <div class="weekly-bars">
+
+                            <div class="day-bar">
+
+                                <span>
+                                    M
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    T
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    W
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    T
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    F
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    S
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="day-bar">
+
+                                <span>
+                                    S
+                                </span>
+
+                                <div class="bar-container">
+                                    <div
+                                        class="day-fill"
+                                        style="height: 0%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ANALYTICS
+                ================================================== -->
+
+                <section
+                    id="analytics"
+                    class="panel analytics-panel"
+                >
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="panel-kicker">
+                                INSIGHTS
+                            </p>
+
+                            <h3>
+                                Career Analytics
+                            </h3>
+
+                        </div>
+
+                        <span class="period-label">
+                            All time
+                        </span>
+
+                    </div>
+
+
+                    <div class="analytics-placeholder">
+
+                        <div class="analytics-icon">
+                            ◒
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Your career data will become your advantage.
+                            </strong>
+
+                            <p>
+                                CareerOS will turn your goals, projects,
+                                applications, skills, and learning activity
+                                into actionable insights.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     AI ASSISTANT
+                ================================================== -->
+
+                <section
+                    id="assistant"
+                    class="assistant-panel"
+                >
+
+                    <div class="assistant-content">
+
+                        <div class="assistant-icon">
+                            ✧
+                        </div>
+
+                        <div>
+
+                            <p class="panel-kicker">
+                                CAREEROS AI
+                            </p>
+
+                            <h3>
+                                Your career copilot.
+                            </h3>
+
+                            <p>
+                                Get personalized guidance based on your
+                                goals, skills, projects, learning progress,
+                                and job search.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="assistant-button"
+                        type="button"
+                    >
+                        Open AI Assistant
+                    </button>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="/static/dashboard.js"></script>
+
+</body>
+
+</html>

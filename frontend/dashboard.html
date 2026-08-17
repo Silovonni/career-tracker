@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CareerOS — Your personal career development dashboard"
+    >
+
+    <title>CareerOS — Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/dashboard.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                C
+            </div>
+
+            <div class="brand-copy">
+
+                <strong>
+                    CareerOS
+                </strong>
+
+                <span>
+                    Career Development
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <div class="nav-label">
+                WORKSPACE
+            </div>
+
+            <a
+                href="/dashboard"
+                class="nav-item active"
+            >
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a
+                href="#goals"
+                class="nav-item"
+            >
+                <span class="nav-icon">◎</span>
+                <span>Goals</span>
+            </a>
+
+            <a
+                href="#career"
+                class="nav-item"
+            >
+                <span class="nav-icon">↗</span>
+                <span>Career Tracker</span>
+            </a>
+
+            <a
+                href="#applications"
+                class="nav-item"
+            >
+                <span class="nav-icon">▣</span>
+                <span>Applications</span>
+            </a>
+
+
+            <div class="nav-label nav-label-spaced">
+                INSIGHTS
+            </div>
+
+            <a
+                href="#analytics"
+                class="nav-item"
+            >
+                <span class="nav-icon">◔</span>
+                <span>Analytics</span>
+            </a>
+
+            <a
+                href="#score"
+                class="nav-item"
+            >
+                <span class="nav-icon">✦</span>
+                <span>Career Score</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="upgrade-card">
+
+                <div class="upgrade-icon">
+                    ✦
+                </div>
+
+                <strong>
+                    Build your career
+                </strong>
+
+                <p>
+                    Keep your goals, progress and applications organized in one place.
+                </p>
+
+            </div>
+
+
+            <button
+                id="logout-button"
+                class="logout-button"
+                type="button"
+            >
+                <span>↪</span>
+                Sign out
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+
+                <div class="brand-mark">
+                    C
+                </div>
+
+                <strong>
+                    CareerOS
+                </strong>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="icon-button"
+                    type="button"
+                    title="Notifications"
+                >
+                    ♢
+                </button>
+
+
+                <div class="profile">
+
+                    <div
+                        id="profile-avatar"
+                        class="profile-avatar"
+                    >
+                        C
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong id="profile-name">
+                            CareerOS User
+                        </strong>
+
+                        <span>
+                            Career Profile
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE -->
+
+        <div class="page-container">
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        YOUR CAREER DASHBOARD
+                    </div>
+
+                    <h1>
+                        Build the career
+                        <span>you want.</span>
+                    </h1>
+
+                    <p>
+                        Track your goals, measure your progress,
+                        and keep moving toward your next opportunity.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="open-goal-modal"
+                    class="primary-button hero-button"
+                    type="button"
+                >
+                    <span>＋</span>
+                    Create Goal
+                </button>
+
+            </section>
+
+
+
+            <!-- STATS -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Career Progress
+                        </span>
+
+                        <div class="stat-icon purple">
+                            ↗
+                        </div>
+
+                    </div>
+
+                    <div class="stat-value">
+                        <span id="career-progress">
+                            0
+                        </span>%
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="career-progress-bar"
+                            class="progress-fill"
+                            style="width: 0%"
+                        ></div>
+
+                    </div>
+
+                    <span class="stat-description">
+                        Keep building momentum
+                    </span>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Total Goals
+                        </span>
+
+                        <div class="stat-icon blue">
+                            ◎
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="total-goals"
+                        class="stat-value"
+                    >
+                        0
+                    </div>
+
+                    <span class="stat-description">
+                        Goals on your roadmap
+                    </span>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Active Goals
+                        </span>
+
+                        <div class="stat-icon orange">
+                            ◷
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="active-goals"
+                        class="stat-value"
+                    >
+                        0
+                    </div>
+
+                    <span class="stat-description">
+                        Currently in progress
+                    </span>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <div class="stat-icon green">
+                            ✓
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="completed-goals"
+                        class="stat-value"
+                    >
+                        0
+                    </div>
+
+                    <span class="stat-description">
+                        Milestones achieved
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- MAIN GRID -->
+
+            <div class="dashboard-grid">
+
+                <!-- GOALS -->
+
+                <section
+                    id="goals"
+                    class="panel goals-panel"
+                >
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-kicker">
+                                ROADMAP
+                            </div>
+
+                            <h2>
+                                Career Goals
+                            </h2>
+
+                            <p>
+                                The things you're working toward.
+                            </p>
+
+                        </div>
+
+
+                        <div class="panel-actions">
+
+                            <select
+                                id="goal-filter"
+                                class="goal-filter"
+                            >
+                                <option value="all">
+                                    All Goals
+                                </option>
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="completed">
+                                    Completed
+                                </option>
+                            </select>
+
+
+                            <button
+                                id="panel-create-button"
+                                class="small-create-button"
+                                type="button"
+                            >
+                                ＋ Add Goal
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="goals-container"
+                        class="goals-container"
+                    >
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">
+                                ◎
+                            </div>
+
+                            <h3>
+                                Your roadmap starts here
+                            </h3>
+
+                            <p>
+                                Create your first career goal and start turning your plans into progress.
+                            </p>
+
+                            <button
+                                id="empty-create-button"
+                                class="primary-button"
+                                type="button"
+                            >
+                                ＋ Create Your First Goal
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- RIGHT COLUMN -->
+
+                <aside class="right-column">
+
+                    <section
+                        id="career"
+                        class="panel profile-panel"
+                    >
+
+                        <div class="panel-kicker">
+                            CAREER PROFILE
+                        </div>
+
+                        <h2>
+                            Your career snapshot
+                        </h2>
+
+                        <p class="panel-subtitle">
+                            Keep your direction visible.
+                        </p>
+
+
+                        <div class="profile-list">
+
+                            <div class="profile-row">
+
+                                <span>
+                                    Target Role
+                                </span>
+
+                                <strong id="target-role">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-row">
+
+                                <span>
+                                    Education
+                                </span>
+
+                                <strong id="education">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-row">
+
+                                <span>
+                                    Experience
+                                </span>
+
+                                <strong id="experience-level">
+                                    Not set
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="secondary-button"
+                            type="button"
+                        >
+                            Edit Career Profile
+                        </button>
+
+                    </section>
+
+
+
+                    <section
+                        id="applications"
+                        class="panel momentum-panel"
+                    >
+
+                        <div class="momentum-symbol">
+                            ✦
+                        </div>
+
+                        <div class="panel-kicker">
+                            KEEP GOING
+                        </div>
+
+                        <h2>
+                            Progress compounds.
+                        </h2>
+
+                        <p>
+                            Every application, project and completed goal moves your career forward.
+                        </p>
+
+                    </section>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- GOAL MODAL -->
+
+<div
+    id="goal-modal"
+    class="modal hidden"
+>
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="modal-card">
+
+        <button
+            id="close-modal"
+            class="modal-close"
+            type="button"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-header">
+
+            <div class="modal-icon">
+                ◎
+            </div>
+
+            <div>
+
+                <div class="panel-kicker">
+                    NEW GOAL
+                </div>
+
+                <h2>
+                    Create a career goal
+                </h2>
+
+                <p>
+                    Give yourself something meaningful to work toward.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="goal-form">
+
+            <label for="goal-title">
+
+                Goal Title
+
+                <input
+                    id="goal-title"
+                    type="text"
+                    placeholder="Example: Become a Software Engineer"
+                    required
+                >
+
+            </label>
+
+
+            <label for="goal-description">
+
+                Description
+
+                <textarea
+                    id="goal-description"
+                    placeholder="What do you want to accomplish?"
+                    rows="4"
+                ></textarea>
+
+            </label>
+
+
+            <div
+                id="goal-message"
+                class="form-message"
+            ></div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancel-goal"
+                    type="button"
+                    class="secondary-button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Create Goal
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="/static/dashboard.js"></script>
+
+</body>
+
+</html>
